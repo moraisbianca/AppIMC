@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppIMC.MainPage">
+
+    <StackLayout>
+
+        <Label Text="Selecione o Sexo:"/>
+        <Picker Title="Gênero (M/F):" x:Name="pck_teste">
+            <Picker.Items>
+                <x:String>Masculino</x:String>
+                <x:String>Feminino ❤</x:String>
+            </Picker.Items>
+        </Picker>
+
+        <Label Text="Digite seu peso:"/>
+        <Entry x:Name="txt_peso" />
+
+        <Label Text="Digite sua altura:"/>
+        <Entry x:Name="txt_altura" />
+
+        <Button Text="Calcule" Clicked="Button_Clicked" />
+
+        <Grid ColumnDefinitions="*, *, *"
+          RowDefinitions="*, *, *, *, *, *, *">
+
+            <Label Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3"
+               Text="IMC - Índice de Massa Corporal" HorizontalTextAlignment="Center" />
+            <Label Grid.Row="1" Grid.Column="1"
+               Text="HOMEM" HorizontalTextAlignment="Center" />
+            <Label Grid.Row="1" Grid.Column="2"
+               Text="MULHERES" HorizontalTextAlignment="Center" />
+
+            <Label Grid.Row="2" Grid.Column="0" Text="Abaixo do normal" HorizontalTextAlignment="Center"/>
+            <Label Grid.Row="3" Grid.Column="0" Text="Peso normal" HorizontalTextAlignment="Center"/>
+            <Label Grid.Row="4" Grid.Column="0" Text="Obesidade leve I" HorizontalTextAlignment="Center"/>
+            <Label Grid.Row="5" Grid.Column="0" Text="Obesidade moderada II" HorizontalTextAlignment="Center"/>
+            <Label Grid.Row="6" Grid.Column="0" Text="Obesidade mórbida III" HorizontalTextAlignment="Center"/>
+
+            <Label Grid.Row="2" Grid.Column="1" Text="Menor que 20" HorizontalTextAlignment="Center"/>
+            <Label Grid.Row="3" Grid.Column="1" Text="De 20 a 25" HorizontalTextAlignment="Center"/>
+            <Label Grid.Row="4" Grid.Column="1" Text="De 25 a 30" HorizontalTextAlignment="Center"/>
+            <Label Grid.Row="5" Grid.Column="1" Text="De 30 a 43" HorizontalTextAlignment="Center"/>
+            <Label Grid.Row="6" Grid.Column="1" Text="Maior que 43" HorizontalTextAlignment="Center"/>
+
+            <Label Grid.Row="2" Grid.Column="2" Text="Menor que 19" HorizontalTextAlignment="Center"/>
+            <Label Grid.Row="3" Grid.Column="2" Text="De 19 a 24" HorizontalTextAlignment="Center"/>
+            <Label Grid.Row="4" Grid.Column="2" Text="De 24 a 29" HorizontalTextAlignment="Center"/>
+            <Label Grid.Row="5" Grid.Column="2" Text="De 29 a 39" HorizontalTextAlignment="Center"/>
+            <Label Grid.Row="6" Grid.Column="2" Text="Maior que 39" HorizontalTextAlignment="Center"/>
+
+        </Grid>
+    </StackLayout>
+
+</ContentPage>
